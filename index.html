@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <style>
-      body {
+      /* body {
         font-family: "Poppins", sans-serif;
         text-align: center;
         margin-top: 50px;
@@ -45,6 +45,43 @@
         font-weight: bold;
         margin-top: 20px;
         color: #f1c40f;
+      } */
+      body {
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        background-color: #1a237e; /* Royal Blue */
+        color: white;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      input,
+      button {
+        margin: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      input {
+        width: 200px;
+        text-align: center;
+      }
+
+      button {
+        background-color: #f1c40f; /* Golden Yellow */
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      #result {
+        font-size: 18px;
+        margin-top: 20px;
+        color: #00cec9; /* Light Cyan */
       }
     </style>
   </head>
@@ -56,15 +93,14 @@
     <br />
     <label for="tipPercentage">Tip Percentage</label>
     <br />
-    <select name="tipPercentage" id="tipPercentage">
-      <option value="5">5%</option>
-      <option value="10">10%</option>
-      <option value="15" selected>15%</option>
-      <option value="20">20%</option>
-    </select>
+    <input
+      type="number"
+      id="tipPercentage"
+      placeholder="Enter Tip Percentage"
+    />
     <br />
-    <button onclick="totalAmount()">Calcuate Amount</button>
+    <button onclick="calculateTip()">Calcuate</button>
     <p id="result"></p>
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
   </body>
 </html>
